@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Date Concepts</title>
+</head>
+<body>
+
+<h1>JavaScript Date Concepts</h1>
+
+<button onclick="showCurrentDate()">Show Current Date</button>
+<button onclick="showDateFromString()">Show Date from String</button>
+<button onclick="showDateWithSpecifiedTime()">Show Date with Specified Time</button>
+<button onclick="showDateFromMilliseconds()">Show Date from Milliseconds</button>
+<button onclick="displayDates()">Display Dates</button>
+
+<p id="output"></p>
+
+<script>
+    function showCurrentDate() {
+        const d = new Date();
+        document.getElementById("output").innerHTML = d.toString();
+    }
+
+    function showDateFromString() {
+        const d1 = new Date("October 13, 2014 11:13:00");
+        const d2 = new Date("2023-08-20");
+        document.getElementById("output").innerHTML = d1.toString() + "<br>" + d2.toString();
+    }
+
+    function showDateWithSpecifiedTime() {
+        const d = new Date(2018, 11, 24, 10, 33, 30, 0);
+        document.getElementById("output").innerHTML = d.toString();
+    }
+
+    function showDateFromMilliseconds() {
+        const d1 = new Date(100000000000);
+        const d2 = new Date(-100000000000);
+        const d3 = new Date(24 * 60 * 60 * 1000);
+        document.getElementById("output").innerHTML = d1.toString() + "<br>" + d2.toString() + "<br>" + d3.toString();
+    }
+
+    function displayDates() {
+        const d = new Date();
+        let output = "Default: " + d.toString() + "<br>";
+        output += "toDateString: " + d.toDateString() + "<br>";
+        output += "toUTCString: " + d.toUTCString() + "<br>";
+        output += "toISOString: " + d.toISOString();
+        document.getElementById("output").innerHTML = output;
+    }
+</script>
+
+</body>
+</html>

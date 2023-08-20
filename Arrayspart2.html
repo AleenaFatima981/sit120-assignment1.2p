@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Array Methods</title>
+</head>
+<body>
+    <h1>JavaScript Arrays</h1>
+
+    <!-- Length Property -->
+    <section id="length-section">
+        <h2>The length Property</h2>
+        <p id="length-demo"></p>
+    </section>
+
+    <!-- toString Method -->
+    <section id="toString-section">
+        <h2>The toString() Method</h2>
+        <p id="toString-demo"></p>
+    </section>
+
+    <!-- pop Method -->
+    <section id="pop-section">
+        <h2>The pop() Method</h2>
+        <p id="pop-demo-before"></p>
+        <p id="pop-demo-after"></p>
+    </section>
+
+    <!-- push Method -->
+    <section id="push-section">
+        <h2>The push() Method</h2>
+        <p id="push-demo-before"></p>
+        <p id="push-demo-after"></p>
+    </section>
+
+    <!-- shift Method -->
+    <section id="shift-section">
+        <h2>The shift() Method</h2>
+        <p id="shift-demo-before"></p>
+        <p id="shift-demo-after"></p>
+    </section>
+
+    <script>
+        // Length Property
+        const fruitsLength = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("length-demo").innerHTML = fruitsLength.length;
+
+        // toString Method
+        const fruitsToString = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("toString-demo").innerHTML = fruitsToString.toString();
+
+        // pop Method
+        const fruitsPop = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("pop-demo-before").innerHTML = fruitsPop;
+        fruitsPop.pop();
+        document.getElementById("pop-demo-after").innerHTML = fruitsPop;
+
+        // push Method
+        const fruitsPush = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("push-demo-before").innerHTML = fruitsPush;
+        fruitsPush.push("Kiwi");
+        document.getElementById("push-demo-after").innerHTML = fruitsPush;
+
+        // shift Method
+        const fruitsShift = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("shift-demo-before").innerHTML = fruitsShift;
+        fruitsShift.shift();
+        document.getElementById("shift-demo-after").innerHTML = fruitsShift;
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript implementation</h1>
+
+<h2>The charAt() Method</h2>
+<p id="charAt"></p>
+
+<script>
+var text = "HELLO WORLD";
+document.getElementById("charAt").innerHTML = text.charAt(0);
+</script>
+
+<h2>The Concat() Method</h2>
+<p id="Concat"></p>
+<script>
+    let text1 = "Hello";
+    let text2 = "World!";
+    let text3 = text1.concat(" ",text2);
+    document.getElementById("Concat").innerHTML = text3;
+    </script>
+
+<h2>The padEnd() Method</h2>
+<p id="padEnd"></p>
+<script>
+    let text4 = "5";
+    let paddedText = text4.padEnd(4,"0"); 
+    document.getElementById("padEnd").innerHTML = paddedText;
+</script>  
+
+<h2>The .replace Method</h2>
+<p id="replace">Welcome to SIT120 Webapge</p>
+<button onclick="myFunction()">Click to Replace</button>
+
+<script>
+function myFunction() {
+  let text = document.getElementById("replace").innerHTML;
+  document.getElementById("replace").innerHTML =
+  text.replace("SIT120","Aleena's");
+}
+</script>  
+
+<h2>Convert string to upper case:</h2>
+
+<button onclick="UcaseFunction()">Try it</button>
+
+<p id="upper">Hello World!</p>
+
+<script>
+function UcaseFunction() {
+  let text = document.getElementById("upper").innerHTML;
+  document.getElementById("upper").innerHTML =
+  text.toUpperCase();
+}
+</script>
+
+
+
+</body>
+</html>
+
